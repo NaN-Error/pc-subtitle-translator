@@ -1,0 +1,80 @@
+{
+  "app": "PC subtitle translator",
+  "version": "0.1.1",
+  "verification_date": "2026-10-24",
+  "automated_tests": {
+    "passed": 96,
+    "failed": 0,
+    "process_exit_code": 0,
+    "duration_seconds": 0.68,
+    "command": "QT_QPA_PLATFORM=offscreen python -m pytest -q",
+    "network_requests": "Mocked OpenAI transports; no paid API calls",
+    "capture": "Synthetic PCM and fake native driver",
+    "ui": "Qt offscreen; native-window event dispatch simulated by QTest",
+    "baseline_app_version": "0.1.0",
+    "rerun_for_packaging_only_repair": false
+  },
+  "additional_checks": {
+    "python_compileall": "passed",
+    "pip_check": "No broken requirements found",
+    "actual_widget_previews": "4 rendered, process exit 0"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "os": "Linux",
+    "architecture": "x86_64",
+    "runtime_dependencies": {
+      "PySide6-Essentials": "6.12.0",
+      "shiboken6": "6.12.0",
+      "numpy": "2.5.4",
+      "soxr": "1.1.0",
+      "httpx": "0.28.1",
+      "websockets": "17.3",
+      "keyring": "25.7.0",
+      "pytest": "9.1.1",
+      "pytest-asyncio": "1.4.0"
+    }
+  },
+  "not_tested": [
+    "Native Windows executable/runtime startup",
+    "WASAPI on physical speakers/headphones",
+    "Windows Credential Manager",
+    "Native Windows click-through, z-order and multi-monitor DPI",
+    "Paid live OpenAI requests and model access",
+    "Measured end-to-end translation latency or accuracy"
+  ],
+  "portable_runtime": {
+    "python": "3.14.9",
+    "architecture": "Windows x64",
+    "provenance": "Official python.org embeddable distribution and pinned PyPI wheels",
+    "hash_verification": true,
+    "native_execution_tested": false
+  },
+  "resolved_regressions": [
+    "Idle audio subframe preservation",
+    "Transient server errors",
+    "Duplicate audio commit acknowledgment",
+    "Idempotent stop during cleanup",
+    "In-flight translation freshness deadline",
+    "Independent clickable playback surface when captions are click-through",
+    "Qt window teardown ownership"
+  ],
+  "packaging_repair": {
+    "issue": "Windows extraction could exceed classic MAX_PATH with the original 198-character internal path.",
+    "focused_tests": {
+      "passed": 13,
+      "failed": 0,
+      "process_exit_code": 0,
+      "command": "python -m pytest tests/test_packaging.py -q"
+    },
+    "archive_name": "Subtitles.zip",
+    "root": "Sub",
+    "runtime": "r",
+    "packages": "r/p",
+    "maximum_relative_path_budget_utf16_units": 128,
+    "omissions": "Exactly four unused static Qt build object files; runtime DLLs, code, assets, plugins and licences retained.",
+    "application_functionality_changes": false,
+    "native_windows_extraction_tested": false,
+    "final_archive_integrity_and_path_audit": "Enforced by the portable builder; details in bundle-manifest.json."
+  }
+}

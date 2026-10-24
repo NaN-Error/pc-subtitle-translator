@@ -1,0 +1,71 @@
+These notices describe the portable Windows release. The Git repository contains
+application source; the bundled third-party binaries and complete license copies
+are supplied in the release download. The application license is in LICENSE.
+
+Third-party software notices
+============================
+
+This portable app includes CPython and files from verified Python distributions.
+Retained runtime files are unmodified; four unused Qt static-build objects are omitted.
+The omissions are recorded in bundle-manifest.json. Every runtime DLL and asset is retained.
+Licenses and copyright notices remain in r/ and each .dist-info directory under r/p/.
+Copies of discovered license/notice files are also provided in licenses/.
+
+CPython 3.14.9: https://www.python.org/downloads/release/python-3149/
+CPython source: https://www.python.org/downloads/source/
+
+Qt for Python (PySide6/Shiboken6) and Qt are separate third-party libraries.
+The Qt DLLs and Python bindings remain separate, replaceable files; this package
+does not combine them into a single executable or restrict library replacement.
+The application source is included in app/. To substitute a compatible modified
+library build, replace its files under r/p/ and restart.
+Qt for Python source repository: https://code.qt.io/pyside/pyside-setup.git/
+Qt source repositories: https://code.qt.io/cgit/qt/
+Qt licensing: https://www.qt.io/licensing/open-source-lgpl-obligations
+
+Packages included:
+- anyio 4.15.1: https://pypi.org/project/anyio/4.15.1/
+  Source code: https://github.com/agronholm/anyio
+- certifi 2026.10.23: https://pypi.org/project/certifi/2026.10.23/
+  Homepage: https://github.com/certifi/python-certifi
+  Source: https://github.com/certifi/python-certifi
+- h11 0.16.0: https://pypi.org/project/h11/0.16.0/
+  Homepage: https://github.com/python-hyper/h11
+- httpcore 1.0.9: https://pypi.org/project/httpcore/1.0.9/
+  Homepage: https://www.encode.io/httpcore/
+  Source: https://github.com/encode/httpcore
+- httpx 0.28.1: https://pypi.org/project/httpx/0.28.1/
+  Homepage: https://github.com/encode/httpx
+  Source: https://github.com/encode/httpx
+- idna 3.20: https://pypi.org/project/idna/3.20/
+  Source: https://github.com/kjd/idna
+- jaraco.classes 3.4.0: https://pypi.org/project/jaraco.classes/3.4.0/
+  Homepage: https://github.com/jaraco/jaraco.classes
+- jaraco.context 6.1.2: https://pypi.org/project/jaraco.context/6.1.2/
+  Source: https://github.com/jaraco/jaraco.context
+- jaraco.functools 4.6.0: https://pypi.org/project/jaraco.functools/4.6.0/
+  Source: https://github.com/jaraco/jaraco.functools
+- keyring 25.7.0: https://pypi.org/project/keyring/25.7.0/
+  Source: https://github.com/jaraco/keyring
+- more-itertools 11.2.1: https://pypi.org/project/more-itertools/11.2.1/
+  Homepage: https://github.com/more-itertools/more-itertools
+- numpy 2.5.4: https://pypi.org/project/numpy/2.5.4/
+  homepage: https://numpy.org
+  source: https://github.com/numpy/numpy
+- PyAudioWPatch 0.2.12.9: https://pypi.org/project/PyAudioWPatch/0.2.12.9/
+  Homepage: https://github.com/s0d3s/PyAudioWPatch/
+- PySide6-Essentials 6.12.0: https://pypi.org/project/PySide6-Essentials/6.12.0/
+  Homepage: https://pyside.org
+  Repository: https://code.qt.io/cgit/pyside/pyside-setup.git/
+- pywin32-ctypes 0.2.3: https://pypi.org/project/pywin32-ctypes/0.2.3/
+  Homepage: https://github.com/enthought/pywin32-ctypes
+- shiboken6 6.12.0: https://pypi.org/project/shiboken6/6.12.0/
+  Homepage: https://pyside.org
+  Repository: https://code.qt.io/cgit/pyside/pyside-setup.git/
+- soxr 1.1.0: https://pypi.org/project/soxr/1.1.0/
+  Homepage: https://github.com/dofuuz/python-soxr
+  Source: https://github.com/dofuuz/python-soxr
+- typing-extensions 4.16.0: https://pypi.org/project/typing-extensions/4.16.0/
+  Repository: https://github.com/python/typing_extensions
+- websockets 17.3: https://pypi.org/project/websockets/17.3/
+  Homepage: https://github.com/python-websockets/websockets

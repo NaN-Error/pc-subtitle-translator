@@ -1,0 +1,48 @@
+{
+  "app": "PC Subtitle Translator",
+  "version": "0.1.1",
+  "date": "2026-10-24",
+  "environment": {
+    "os": "Windows 11 Home",
+    "build": "10.0.26200",
+    "architecture": "x64",
+    "python": "3.14.9",
+    "runtime": "Supplied embedded Windows interpreter",
+    "qt_platform": "offscreen"
+  },
+  "automated_tests": {
+    "passed": 103,
+    "skipped": 6,
+    "failed": 0,
+    "exit_code": 0,
+    "duration_seconds": 2.5,
+    "pytest": "9.1.1",
+    "pytest_asyncio": "1.4.0",
+    "scope": "Full supplied test suite against the repository source, using bundled runtime dependencies",
+    "skips": "Case-sensitive collision fixture and five invalid-Windows-name fixtures"
+  },
+  "checks": {
+    "bundled_runtime_imports": [
+      "PySide6 6.12.0",
+      "numpy 2.5.4",
+      "soxr 1.1.0"
+    ],
+    "cli_help": "passed",
+    "sample_qt_views_rendered": 4,
+    "api_requests": "Mocked; no paid API calls",
+    "audio": "Synthetic and fake drivers",
+    "original_application_source_changed": false,
+    "offscreen_preview_fonts": "Segoe UI regular/bold and Segoe UI Symbol registered from Windows Fonts before rendering; fonts are not redistributed.",
+    "original_noncache_bundle_files_verified": 3980,
+    "bytecode_caches": "Generated __pycache__ directories are omitted from the release; source and native libraries are retained.",
+    "credential_pattern_scan": "No credentials found. Two occurrences of an explicitly fake key in the redaction test were reviewed and allowed. No GitHub tokens, AWS keys, private-key blocks, local .env files, or local settings files."
+  },
+  "not_tested": [
+    "Interactive desktop launch through Start.bat",
+    "Real WASAPI hardware capture",
+    "Native click-through, z-order, monitor/DPI behavior",
+    "Windows Credential Manager",
+    "Live OpenAI requests, model access, translation quality, billing, or end-to-end latency"
+  ],
+  "historical_build_record": "verification.json"
+}
