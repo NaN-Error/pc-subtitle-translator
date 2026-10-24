@@ -28,6 +28,13 @@ On Windows, start with `setup_windows.bat`, then:
 
 For a Linux build/check environment with Python 3.12 or later:
 
+Qt also needs system graphics libraries even when tests use the offscreen plugin. On Ubuntu/Debian, install them before creating the test environment:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y libegl1 libopengl0 libgl1 libxkbcommon0 fonts-dejavu-core
+```
+
 ```bash
 python -m venv .venv
 .venv/bin/python -m pip install -r requirements-dev.txt
